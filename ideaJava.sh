@@ -28,7 +28,7 @@ then
 		echo "Java 17 instalado com sucesso!"
 	else
 		echo "Não foi possivel instalar o java 17!"
-		break
+		exit 1
 	fi
 else
 	echo "Java já esta instalado!"
