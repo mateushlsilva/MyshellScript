@@ -16,7 +16,7 @@
 
 
 
-java --version 2> /dev/null
+java --version > /dev/null 2>&1
 
 if [ $? -gt 0 ]
 then
@@ -34,10 +34,10 @@ else
 	echo "Java já esta instalado!"
 fi
 
-snap --help > /dev/null
+snap --help > /dev/null 2>&1
 if [ $? -gt 0 ]
 then
-	echo "Habilitando suporte a snap"; sudo rm /etc/apt/preferences.d/nosnap.pref;sudo apt install snapd -y > /dev/null; sudo apt update -y > /dev/null
+	echo "Habilitando suporte a snap"; sudo rm /etc/apt/preferences.d/nosnap.pref;sudo apt install snapd -y > /dev/null 2>&1; sudo apt update -y > /dev/null 2>&1
 fi
 sleep 2
 clear

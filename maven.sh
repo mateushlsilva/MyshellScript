@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl --version> /dev/null 2>&1
+curl --version > /dev/null 2>&1
 if [ $? -gt 0 ]
 then
 	sudo apt install curl -y > /dev/null 2>&1
